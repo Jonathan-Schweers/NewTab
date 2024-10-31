@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom New Tab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center; /* Keep horizontal centering */
+      align-items: flex-start; /* Align items to the start (top) of the container */
+      height: 100vh; /* Full height of the viewport */
+      margin: 0;
+      font-family: 'Asap', sans-serif;
+      color: white;
+      background-color: rgb(12, 15, 29);
+    }
+    .container {
+      z-index: 12;
+      padding: 20px;
+      height: 190px; /* Adjust height for better spacing */
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+      background-color: hsla(232, 22%, 11%, 0.9);
+      box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+      text-align: center;
+      margin-top: 300px; /* Added margin for spacing from the top */
+    }
+    .input-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end; /* Align items to the bottom */
+      font-size: 22px;
+      height: 190px;
+    }
+    input {
+      padding: 10px;
+      font-size: 22px;
+      margin-top: 5px;
+      /* Removed margin-bottom to allow for correct spacing */
+      color: rgb(133, 108, 76); /* Text color */
+      background-color: rgba(27, 29, 42); /* Background color */
+      box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+      border: 2px solid rgb(133, 108, 76);
+      border-radius: 4px;
+      width: 220px; /* Increased for better spacing */
+      height: 36px;
+      outline: none; /* Remove default focus outline */
+    }
+    input::placeholder {
+      color: rgb(133, 108, 76); /* Match placeholder text color to regular text color */
+      opacity: 1; /* Ensure full opacity */
+    }
+    input:hover::placeholder,
+    input:focus::placeholder {
+      color: white; /* Change placeholder text color on hover or focus */
+    }
+    input:hover {
+      color: white; /* Change text color on hover */
+      border-color: white; /* Change border color on hover */
+    }
+    input:focus {
+      border-color: white; /* Change border color on focus */
+      color: white; /* Change text color to white on focus */
+    }
+    .logo { 
+      margin-bottom: 10px; 
+    }
+    .google-logo {
+      scale: 4.5;
+      padding-bottom: 16px;
+    }
+    .duck-logo {
+      height: 100px; /* Adjust height for DuckDuckGo logo */
+      padding-bottom: 10px;
+    }
+    .images-logo {
+      height: 120px; /* Slightly higher for Google Images logo */
+    }
+    .maps-logo {
+      height: 100px; /* Adjust height for Google Maps logo */
+      padding-bottom: 10px;
+    }
+    .youtube-logo {
+      height: 70px; /* Smaller height for YouTube logo */
+      padding-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Search Bars Section -->
+    <div class="input-row">
+
+      <!-- Google Search Bar -->
+      <div class="input-group">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" class="logo google-logo">
+        <form action="https://www.google.com/search" method="get">
+          <input type="text" name="q" placeholder="Google">
+        </form>
+      </div>
+
+      <!-- DuckDuckGo Search Bar -->
+      <div class="input-group">
+        <img src="https://cdn.worldvectorlogo.com/logos/duckduckgo-4.svg" alt="DuckDuckGo Logo" class="logo duck-logo">
+        <form action="https://duckduckgo.com/" method="get">
+          <input type="text" name="q" placeholder="DuckDuckGo">
+        </form>
+      </div>
+
+      <!-- Google Images (Lens) Search Bar -->
+      <div class="input-group">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Google_Lens_Icon.svg" alt="Google Lens Logo" class="logo images-logo">
+        <form action="https://www.google.com/images" method="get">
+          <input type="text" name="q" placeholder="Images">
+        </form>
+      </div>
+
+      <!-- Google Maps Search Bar -->
+      <div class="input-group">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps Logo" class="logo maps-logo">
+        <form action="https://www.google.com/maps" method="get">
+          <input type="text" name="q" placeholder="Maps">
+        </form>
+      </div>
+
+      <!-- YouTube Search Bar -->
+      <div class="input-group">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube Logo" class="logo youtube-logo">
+        <form action="https://www.youtube.com/results" method="get">
+          <input type="text" name="search_query" placeholder="YouTube">
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
